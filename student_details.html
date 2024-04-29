@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Details</h2>
+        <form action="save_details.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phno">Phone Number:</label>
+                <input type="tel" id="phno" name="phno" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="college">College Name:</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+            <div class="form-group">
+                <label for="10th_result">10th Total Result:</label>
+                <input type="text" id="10th_result" name="10th_result" required>
+            </div>
+            <div class="form-group">
+                <label for="12th_result">12th Total Result:</label>
+                <input type="text" id="12th_result" name="12th_result" required>
+            </div>
+            <div class="form-group">
+                <label for="current_qualifications">Current Qualifications:</label>
+                <textarea id="current_qualifications" name="current_qualifications" rows="4" required></textarea>
+            </div>
+            <button type="submit">Save Details</button>
+        </form>
+    </div>
+</body>
+</html>
