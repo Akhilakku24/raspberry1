@@ -1,0 +1,177 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration & Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Registration Page -->
+<div class="container" id="registerPage">
+  <h2>Registration</h2>
+  <form id="registerForm">
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <select id="userType" required>
+      <option value="student">Student</option>
+      <option value="recruiter">Recruiter</option>
+    </select>
+    <input type="submit" value="Register">
+  </form>
+</div>
+
+<!-- Login Page -->
+<div class="container" id="loginPage" style="display: none;">
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="text" placeholder="Username" required>
+    <input type="password" placeholder="Password" required>
+    <select id="userTypeLogin" required>
+      <option value="student">Student</option>
+      <option value="recruiter">Recruiter</option>
+    </select>
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<!-- Student Details Page -->
+<div class="container" id="studentPage" style="display: none;">
+  <h2>Student Details</h2>
+  <form id="studentDetailsForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="date" placeholder="Date of Birth" required>
+    <input type="text" placeholder="University Name" required>
+    <input type="text" placeholder="School Name" required>
+    <label>Grades:</label>
+    <input type="number" placeholder="10th Marks" required>
+    <input type="number" placeholder="12th Marks" required>
+    <input type="number" placeholder="Previous Degree Marks" required>
+    <input type="text" placeholder="Certifications">
+    <input type="text" placeholder="Skills">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!-- Recruiter Details Page -->
+<div class="container" id="recruiterPage" style="display: none;">
+  <h2>Recruiter Details</h2>
+  <form id="recruiterDetailsForm">
+    <input type="text" placeholder="Full Name of the Company" required>
+    <input type="date" placeholder="Date of Establishment" required>
+    <textarea placeholder="About the Company" rows="4" required></textarea>
+    <input type="text" placeholder="Job Role" required>
+    <textarea placeholder="Criteria" rows="4" required></textarea>
+    <input type="text" placeholder="Eligibility" required>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+<!-- Student Filtering Page -->
+<div class="container" id="filterPage" style="display: none;">
+  <h2>Filter Students</h2>
+  <form id="filterForm">
+    <input type="text" placeholder="Skills">
+    <input type="text" placeholder="Eligibility">
+    <input type="submit" value="Filter">
+  </form>
+</div>
+
+<script>
+  // Registration form submission
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can handle registration logic
+    // For simplicity, let's just switch to the login page
+    document.getElementById('registerPage').style.display = 'none';
+    document.getElementById('loginPage').style.display = 'block';
+  });
+
+  // Login form submission
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can handle login logic
+    const userType = document.getElementById('userTypeLogin').value;
+    if (userType === 'student') {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('studentPage').style.display = 'block';
+    } else if (userType === 'recruiter') {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('recruiterPage').style.display = 'block';
+    }
+  });
+
+  // Student Details form submission
+  document.getElementById('studentDetailsForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can handle student details submission logic
+    // For simplicity, let's just switch back to the home page
+    document.getElementById('studentPage').style.display = 'none';
+    document.getElementById('registerPage').style.display = 'block';
+  });
+
+  // Recruiter Details form submission
+  document.getElementById('recruiterDetailsForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can handle recruiter details submission logic
+    // For simplicity, let's just switch back to the home page
+    document.getElementById('recruiterPage').style.display = 'none';
+    document.getElementById('registerPage').style.display = 'block';
+  });
+
+  // Student Filtering form submission
+  document.getElementById('filterForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can handle student filtering logic
+    // For simplicity, let's just switch back to the home page
+    document.getElementById('filterPage').style.display = 'none';
+    document.getElementById('registerPage').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
+
