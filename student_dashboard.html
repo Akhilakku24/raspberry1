@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="student_profile.html">Profile</a></li>
+        <li><a href="student_edit_info.html">Edit Info</a></li>
+        <li><a href="#">Messages</a></li>
+        <!-- Add more links as needed -->
+      </ul>
+    </nav>
+    <div class="content">
+      <h2>Add Personal Details</h2>
+      <form action="update_personal_details.php" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="date" name="dob" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <button type="submit">Save</button>
+      </form>
+      
+      <h2>Add Qualifications</h2>
+      <form action="update_qualifications.php" method="POST">
+        <input type="number" name="10th_marks" placeholder="10th Marks" required>
+        <input type="number" name="12th_marks" placeholder="12th Marks" required>
+        <input type="text" name="studying_in" placeholder="Studying In" required>
+        <input type="text" name="major" placeholder="Major" required>
+        <input type="text" name="specialization" placeholder="Specialization" required>
+        <input type="text" name="cgpa" placeholder="CGPA" required>
+        <input type="text" name="specialized_languages" placeholder="Specialized Languages" required>
+        <button type="submit">Verify</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
+

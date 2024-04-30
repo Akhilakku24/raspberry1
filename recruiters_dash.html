@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recruiter Dashboard</h1>
+        <form id="recruiterForm">
+            <!-- Company Details -->
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+            <label for="aboutCompany">About Company:</label>
+            <textarea id="aboutCompany" name="aboutCompany" rows="4" required></textarea>
+
+            <!-- Job Role -->
+            <label for="jobRole">Job Role:</label>
+            <input type="text" id="jobRole" name="jobRole" required>
+            <label for="eligibilityCriteria">Eligibility Criteria:</label>
+            <input type="text" id="eligibilityCriteria" name="eligibilityCriteria" required>
+
+            <!-- Filter Option -->
+            <label for="filterOption">Filter Students:</label>
+            <select id="filterOption" name="filterOption">
+                <option value="all">All Students</option>
+                <option value="byCGPA">By CGPA</option>
+                <option value="bySkills">By Skills</option>
+                <!-- Add more filter options as needed -->
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

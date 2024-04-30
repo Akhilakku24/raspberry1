@@ -1,57 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-color: #0077b5; /* LinkedIn blue */
+  color: #ffffff;
 }
 
 .container {
-    max-width: 400px;
-    margin: 100px auto; /* Increased margin for more space */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Enhanced box shadow */
-    text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    margin-bottom: 30px; /* Increased margin for heading */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000; /* Black color */
 }
 
-.form-group {
-    margin-bottom: 20px; /* Increased margin between form groups */
-}
-
-label {
-    display: block;
-    font-weight: bold;
+form {
+  display: grid;
+  gap: 15px; /* Increased gap between form elements */
 }
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 input[type="tel"],
+input[type="date"],
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+button {
+  background-color: #0077b5; /* LinkedIn blue */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; /* Added margin to top of buttons */
+}
+
+a {
+  color: #0077b5; /* Updated link color to blue */
+  text-decoration: none;
+}
+
+.login-option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0077b5; /* LinkedIn blue */
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0077b5; /* LinkedIn blue */
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; /* Black color */
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #000000;
+
+}
+
+input[type="text"],
 textarea,
+select,
 button {
-    width: 100%;
-    padding: 15px; /* Increased padding for all input elements and buttons */
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-textarea {
-    resize: vertical; /* Allow vertical resizing of textareas */
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
 }
 
 button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition */
+  background-color: #0077b5; /* LinkedIn blue */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #005f8d; /* Darker blue on hover */
 }
+
+@media screen and (min-width: 768px) {
+  /* Adjust styles for larger screens if needed */
+  .container {
+    padding: 40px;
+  }
+
+  form {
+    gap: 20px;
+  }
+}
+
